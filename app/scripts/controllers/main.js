@@ -5,6 +5,7 @@ angular.module('HomeBaseApp')
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
-      'Karma'
+      'Karma',
+      'Bootstrap 3'
     ];
   });
