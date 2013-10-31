@@ -1,16 +1,23 @@
 var express = require('express'),
     mongoose = require('mongoose'),
     config = require('../config'),
+    rest = require('mers')({uri: config.development.database.uri}),
     path = require('path');
 
+// mongoose.connect(config.development.database.uri);
+var User;
+function setupRest() {
+
+    // Initialize Models
+    User = require('../../app/models/user')(rest.mongoose);
+}
 module.exports = function (app) {
     app.configure('development', function () {
         app.use(function staticsPlaceholder(req, res, next) {
             return next();
         });
-        mongoose.connect(config.development.database.uri, function(){
-            console.log('Database successfully connected to: ' + config.development.database.uri);
-        });
+
+
 
         app.set('port', process.env.PORT || 9000);
         app.set('views', path.join(app.directory, '/app'));
@@ -22,6 +29,7 @@ module.exports = function (app) {
         app.use(express.methodOverride());
         app.use(express.cookieParser('your secret here'));
         app.use(express.session());
+        app.use('/api', rest.rest());
 
         app.use(function middlewarePlaceholder(req, res, next) {
           return next();
@@ -29,5 +37,6 @@ module.exports = function (app) {
 
         app.use(app.router);
         app.use(express.errorHandler());
+        setupRest();
     });
 };
