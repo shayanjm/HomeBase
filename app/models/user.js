@@ -2,6 +2,8 @@ module.exports = function(mongoose) {
     var bcrypt = require('bcrypt');
     var SALT_WORK_FACTOR = 10;
     var Schema = mongoose.Schema;
+
+    // User Schema
     var UserSchema = new Schema({
         username: { type: String, required: true, unique: true },
         password: { type: String, required: true },
@@ -9,6 +11,7 @@ module.exports = function(mongoose) {
         admin: { type: Boolean, required: true }
     });
 
+    // Before the save of any new User, do this:
     UserSchema.pre('save', function (next) {
         var user = this;
 
@@ -25,6 +28,7 @@ module.exports = function(mongoose) {
         });
     });
 
+    // This should probably be split into a new Controller. It essentially is authentication
     UserSchema.methods.comparePassword = function(candidatePassword, cb) {
     bcrypt.compare(candidatePassword, this.password, function(err, isMatch) {
         if(err) return cb(err);
@@ -32,6 +36,7 @@ module.exports = function(mongoose) {
     });
     };
 
+    // Save a test fixture
     var User = mongoose.model('user', UserSchema);
     var user = new User({ username: 'shayanjm6', password: 'test6', email: 'test@test.test6', admin: true });
     user.save();
