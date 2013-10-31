@@ -1,10 +1,15 @@
 var express = require('express'),
+    mongoose = require('mongoose'),
+    config = require('../config'),
     path = require('path');
 
 module.exports = function (app) {
     app.configure('development', function () {
         app.use(function staticsPlaceholder(req, res, next) {
             return next();
+        });
+        mongoose.connect(config.development.database.uri, function(){
+            console.log('Database successfully connected to: ' + config.development.database.uri);
         });
 
         app.set('port', process.env.PORT || 9000);
