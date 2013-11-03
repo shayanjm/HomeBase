@@ -39,6 +39,9 @@
         "grunt-google-cdn": "~0.2.0",
         "grunt-ngmin": "~0.0.2",
         "grunt-express": "~1.0.0",
-        "time-grunt": "~0.1.1"
+        "time-grunt": "~0.1.1",
+        "grunt-mocha-test": "~0.7.0",
+        "chai": "~1.8.1",
+        "supertest": "latest"
     }
 }

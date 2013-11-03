@@ -35,7 +35,7 @@ module.exports = function (grunt) {
         tasks: ['coffee:dist']
       },
       coffeeTest: {
-        files: ['test/spec/{,*/}*.coffee'],
+        files: ['test/{,*/}*.coffee'],
         tasks: ['coffee:test']
       },
       livereload: {
@@ -263,7 +263,16 @@ module.exports = function (grunt) {
           ]
         }
       }
+    },
+    mochaTest: {
+      test: {
+        options: {
+          reporter: 'dot'
+        },
+        src: ['test/back/**/*.js']
+      }
     }
+  });
   });
 
   grunt.registerTask('server', function (target) {
@@ -284,6 +293,7 @@ module.exports = function (grunt) {
     'clean:server',
     'concurrent:test',
     'express:test',
+    'mochaTest',
     'karma'
   ]);
 

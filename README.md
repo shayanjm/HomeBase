@@ -1,7 +1,6 @@
 HomeBase
 ========
 
-You know
 
 TODO:
 
@@ -14,3 +13,13 @@ TODO:
 + Add RESTFUL API
 
 + Set up PassportJS for authentication (using bcrypt?)
+
+
+Installation Requirements:
+==========================
+
+Testing
+==
+
++ Karma
+`sudo npm install -g karma
