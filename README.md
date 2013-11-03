@@ -19,7 +19,8 @@ Installation Requirements:
 ==========================
 
 Testing
-==
+=
 
 + Karma
+
 `sudo npm install -g karma
