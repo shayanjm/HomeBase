@@ -26,6 +26,10 @@ Installation instructions:
 
 ```sudo npm install -g mocha```
 
++ Install PhantomJS
+
+```sudo npm install -g phantomjs```
+
 
 + Install everything in ```package.json```
 
