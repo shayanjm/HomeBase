@@ -15,12 +15,22 @@ TODO:
 + Set up PassportJS for authentication (using bcrypt?)
 
 
-Installation Requirements:
+Installation instructions:
 ==========================
 
-Testing
-=
-
-+ Karma
++ Install Karma:
 
 ```sudo npm install -g karma```
+
++ Install Mocha:
+
+```sudo npm install -g mocha```
+
+
++ Install everything in ```package.json```
+
+```npm install```
+
++ Run!
+
+```grunt server```
