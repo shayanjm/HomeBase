@@ -18,6 +18,8 @@ TODO:
 Installation instructions:
 ==========================
 
+If using ```nvm``` please use node v 0.10.7. It fixes an issue with PhantomJS.
+
 + Install Karma:
 
 ```sudo npm install -g karma```
