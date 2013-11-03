@@ -4,4 +4,12 @@ module.exports = function (app) {
             title: 'Express'
         });
     });
+
+    app.post('/login',
+	passport.authenticate('local'),
+	function(req, res) {
+		res.send('Welcome ' + req.user.username + '.');
+	});
 };
+
+

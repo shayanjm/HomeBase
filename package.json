@@ -13,7 +13,9 @@
         "ejs": "*",
         "mongoose": "latest",
         "mers": "latest",
-        "bcrypt": "latest"
+        "bcrypt": "latest",
+        "passport": "latest",
+        "passport-local": "latest"
     },
     "devDependencies": {
         "grunt": "~0.4.1",
