@@ -23,4 +23,4 @@ Testing
 
 + Karma
 
-`sudo npm install -g karma
+```sudo npm install -g karma```
