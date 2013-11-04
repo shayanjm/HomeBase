@@ -8,10 +8,13 @@ var express = require('express'),
 
 // mongoose.connect(config.development.database.uri);
 var User;
+var Task;
+
 function setupRest() {
 
     // Initialize Models
     User = require('../../app/models/user')(rest.mongoose);
+    Task = require('../../app/models/task')(rest.mongoose);
 }
 module.exports = function (app) {
     app.configure('development', function () {
