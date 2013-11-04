@@ -6,13 +6,13 @@ TODO:
 
 + Set up Database access
 
-+ ~~~Set up Testing Suites (Mocha + Chai for back, Karma + PhantomJS for front)~~~
++ ~~Set up Testing Suites (Mocha + Chai for back, Karma + PhantomJS for front)~~
 
 + Assess models (User/Task/etc.)
 
 + Add RESTFUL API
 
-+ ~~~Set up PassportJS for authentication (using bcrypt?)~~~
++ ~~Set up PassportJS for authentication (using bcrypt?)~~
 
 
 Installation instructions:
