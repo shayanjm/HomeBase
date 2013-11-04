@@ -19,8 +19,6 @@ module.exports = function (app) {
             return next();
         });
 
-
-
         app.set('port', process.env.PORT || 9000);
         app.set('views', path.join(app.directory, '/app'));
         app.engine('html', require('ejs').renderFile);
