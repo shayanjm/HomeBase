@@ -15,7 +15,6 @@ module.exports = function(mongoose) {
 
     });*/
 
-    // Save a test fixture
     var Task = mongoose.model('task', TaskSchema);
 
     return Task;
