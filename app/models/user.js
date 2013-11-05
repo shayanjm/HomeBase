@@ -7,8 +7,7 @@ module.exports = function(mongoose) {
     var UserSchema = new Schema({
         username: { type: String, required: true, unique: true },
         password: { type: String, required: true },
-        email: { type: String, required: true, unique: true},
-        admin: { type: Boolean, required: true }
+        email: { type: String, required: true, unique: true }
     });
 
     // Before the save of any new User, do this:
@@ -38,8 +37,12 @@ module.exports = function(mongoose) {
 
     // Save a test fixture
     var User = mongoose.model('user', UserSchema);
-    var user = new User({ username: 'shayanjm6', password: 'test6', email: 'test@test.test6', admin: true });
-    user.save();
 
+    var user = new User({ username: 'shayanjm7', password: 'test7', email: 'test@test.test6' });
+    user.save();
+    var user2 = new User({ username: 'shayanjm6', password: 'test6', email: 'test@test.test6' });
+    user2.save();
+
+    User
     return User;
 };
