@@ -22,15 +22,15 @@ If using ```nvm``` please use node v 0.10.7. It fixes an issue with PhantomJS.
 
 + Install Karma:
 
-```sudo npm install -g karma```
+```npm install -g karma```
 
 + Install Mocha:
 
-```sudo npm install -g mocha```
+```npm install -g mocha```
 
 + Install PhantomJS
 
-```sudo npm install -g phantomjs```
+```npm install -g phantomjs```
 
 
 + Install everything in ```package.json```
