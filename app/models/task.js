@@ -6,7 +6,7 @@ module.exports = function(mongoose) {
         name: { type: String, required: true, unique: true },
         description: { type: String},
         estimatedIntervals: { type: Number, required: true },
-        completed : { type: boolean, required: true }
+        completed : { type: Boolean, required: true }
     });
 
     /*// Before the save of any new Task, do this:
