@@ -6,7 +6,7 @@ var express = require('express'),
     passport = require('passport'),
     LocalStrategy = require('passport-local').Strategy;
 
-mongoose.connect(config.development.database.uri);
+// mongoose.connect(config.development.database.uri);
 var User;
 var Task;
 

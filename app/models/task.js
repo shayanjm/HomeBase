@@ -5,7 +5,7 @@ module.exports = function(mongoose) {
     var TaskSchema = new Schema({
         name: { type: String, required: true, unique: true },
         description: { type: String},
-        estimatedIntervals: { type: int, required: true },
+        estimatedIntervals: { type: Number, required: true },
         completed : { type: boolean, required: true }
     });
 
