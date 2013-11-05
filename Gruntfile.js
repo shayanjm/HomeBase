@@ -314,7 +314,7 @@ module.exports = function (grunt) {
     var mongoose = require('mongoose');
     var config = require(__dirname + '/config/config');
     var done = this.async();
-    mongoose.connect(config.development.db.uri);
+    mongoose.connect(config.development.database.uri);
     require(__dirname + '/config/fixtures/user.fix')(done, mongoose);
   });
 
