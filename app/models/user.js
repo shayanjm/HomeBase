@@ -38,8 +38,11 @@ module.exports = function(mongoose) {
 
     // Save a test fixture
     var User = mongoose.model('user', UserSchema);
+<<<<<<< HEAD
 
   
 
+=======
+>>>>>>> Removed old fixtures from user model
     return User;
 };

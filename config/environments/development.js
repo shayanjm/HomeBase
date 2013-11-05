@@ -11,7 +11,6 @@ var User;
 var Task;
 
 function setupRest() {
-
     // Initialize Models
     User = require('../../app/models/user')(rest.mongoose);
     Task = require('../../app/models/task')(rest.mongoose);
