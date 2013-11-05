@@ -8,7 +8,7 @@ module.exports = function(mongoose) {
         username: { type: String, required: true, unique: true },
         password: { type: String, required: true },
         email: { type: String, required: true, unique: true },
-        tasks: [{ type: Schema.Types.ObjectID, ref: 'task' }]
+        tasks: [{ type: Schema.Types.ObjectId, ref: 'task' }]
     });
 
     // Before the save of any new User, do this:
